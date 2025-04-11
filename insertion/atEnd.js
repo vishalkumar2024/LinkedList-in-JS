@@ -1,5 +1,5 @@
 
-//  Inserting new node to the end //
+//  Inserting new node to the end  //
 function node(data) {
     this.data = data;
     this.next = null;
