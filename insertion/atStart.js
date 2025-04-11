@@ -8,7 +8,16 @@ function node(data) {
 let head = new node(12)
 let mid = new node(18);
 head.next=mid;
-let newNode=new node(6);
+let newNode=new node("JavaScript");
 newNode.next=head;
 head=newNode
-console.log(head)
+
+function traversal(head) { 
+    let current = head;
+    while (current != null) {
+        console.log(current.data);
+        current = current.next;
+    }
+}
+
+traversal(head);

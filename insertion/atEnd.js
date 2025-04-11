@@ -26,7 +26,7 @@ let mid = new node(18);
 let tail = new node(24);
 head.next = mid;
 mid.next = tail;
-let newNode = new node(30) //node which has to be inserted to the last of linkedList
+let newNode = new node("JavaScript") //node which has to be inserted to the last of linkedList
 
 insertNode(newNode, head);
 traversal( head);
