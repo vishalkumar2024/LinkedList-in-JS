@@ -51,23 +51,36 @@
 
 
 
-
-
-
-
-// // Inserting new node to the ending //
+// // Inserting new node to the end //
 function node(data) {
     this.data = data;
     this.next = null;
 }
+function insertNode(newNode, head) {
+    let current = head;
+    while (current.next != null) {
+        current = current.next;
+    }
+    current.next = newNode;
+}
+
+function traversal(head) {
+    let current = head;
+    // console.log(current)
+    while (current != null) {
+        console.log(current.data);
+        current = current.next;
+        // console.log("object")
+    }
+}
+
 
 let head = new node(12)
 let mid = new node(18);
 let tail = new node(24);
-head.next=mid;
-mid.next=tail;
+head.next = mid;
+mid.next = tail;
+let newNode = new node(30)
 
-while()
-
-
-console.log(head)
+insertNode(newNode, head);
+traversal( head);
