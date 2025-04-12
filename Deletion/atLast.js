@@ -3,13 +3,13 @@ function Node(data) {
     this.next = null
 }
 
-let head = new Node(10)
-let m1 = new Node(20)
-let m2 = new Node(30)
-let tail = new Node(40)
+let head = new Node(10);
+let m1 = new Node(20);
+let m2 = new Node(30);
+let tail = new Node(40);
 
-head.next = m1
-m1.next = m2
+head.next = m1;
+m1.next = m2;
 m2.next = tail;
 
 let current = head;
