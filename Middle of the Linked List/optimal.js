@@ -7,7 +7,6 @@ function middleNode(head) {
         first = first.next;
         second = second.next.next;
     }
-
     if (second.next !== null) { //for odd number of nodes in linkedList
         return first.next;
     }

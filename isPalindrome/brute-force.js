@@ -1,4 +1,4 @@
-//Leetcode 206
+//Leetcode 234
 
 function reverseList(head) {
     function check(arr) {

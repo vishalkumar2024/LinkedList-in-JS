@@ -1,17 +1,17 @@
-//Leetcode 206
+//Leetcode 234
 
 function reverseList(head) {
+
+        // Find the middle of the linked list
         var slow = head;
         var fast = head;
-    
-        // Find the middle of the linked list
         while (fast !== null && fast.next !== null) {
             slow = slow.next;
             fast = fast.next.next;
         }
+        var mid = slow.next;
     
         // Reverse the second half of the linked list
-        var mid = slow.next;
         var prev = null;
         while (mid !== null) {
             var temp = mid.next;
