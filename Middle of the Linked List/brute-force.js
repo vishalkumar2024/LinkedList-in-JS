@@ -1,7 +1,9 @@
+//Leetcode 876
+
 function middleNode(head) {
-    function totalCount(head, count) {
+    function totalCount(head, count) { 
         let ptr = head;
-        while (ptr != null) {
+        while (ptr != null) { //TC=O(n)
             ptr = ptr.next;
             count++
         }
@@ -14,7 +16,7 @@ function middleNode(head) {
 
     let current = head;
     let idx = 0
-    while (idx < mid) {
+    while (idx < mid) {  //TC=O(n/2)
         current = current.next;
         idx++
     }
@@ -39,3 +41,5 @@ m3.next = m4;
 
 console.log(middleNode(head));
 
+// TC= O(n) + O(n/2) ~ O(n)
+// SC=O(1)

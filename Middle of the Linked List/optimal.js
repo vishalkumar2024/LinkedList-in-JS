@@ -8,11 +8,11 @@ function middleNode(head) {
         second = second.next.next;
     }
 
-    if (second.next !== null) {
-        return first.next
+    if (second.next !== null) { //for odd number of nodes in linkedList
+        return first.next;
     }
-    else {
-        return first
+    else {  //for even number of nodes in linkedList
+        return first;
     }
 }
 

@@ -55,7 +55,3 @@ printList(head);
 // // [5,next --> [10,next --> [20,next --> Null]]]
 
 
-
-
-
-
