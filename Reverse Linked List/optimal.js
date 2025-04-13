@@ -30,5 +30,5 @@ m3.next = m4;
 
 console.log(reverseList(head));
 
-// TC= O(2n)
-// SC=O(n)
+// TC= O(n)
+// SC=O(1)
