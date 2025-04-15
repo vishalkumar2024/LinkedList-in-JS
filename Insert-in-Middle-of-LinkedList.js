@@ -1,8 +1,8 @@
 
-function insertInMiddle(head, x) {
+function insertInMiddle(head, x) {   //Not solved yet
     let insert = new Node(x);
-
-    function totalCount(head, count) { 
+    let mid = -1;
+    function totalCount(head, count) {
         let ptr = head;
         while (ptr != null) { //TC=O(n)
             ptr = ptr.next;
@@ -10,14 +10,22 @@ function insertInMiddle(head, x) {
         }
         return count;
     }
-    let totalNode = totalCount(head, 0);
+    if (totalCount(head, 1) == 0) {
+        return x
+    }
+    
+    let totalNode = totalCount(head, 1) - 1;
 
-    let mid=Math.floor(totalNode/2);
-   console.log(mid)
+    if ((totalNode / 2) % 1 === 0) {
+        mid = totalNode / 2;
+    }
+    else {
+        mid = Math.ceil(totalNode / 2);
+    }
 
     let curr = head;
-    let idx = 0;
-    while (idx<mid ) {
+    let idx = 1;
+    while (idx < mid) {
         curr = curr.next;
         idx++;
     }
@@ -26,14 +34,13 @@ function insertInMiddle(head, x) {
     insert.next = temp;
 
     // return head;
-    
-     curr = head;
 
-    while (curr !== null ) {
+    curr = head;
+
+    while (curr !== null) {
         console.log(curr.data)
-        curr=curr.next
+        curr = curr.next
     }
-
 }
 
 function Node(data) {
@@ -54,5 +61,4 @@ m2.next = m3;
 
 console.log(insertInMiddle(head, 12));
 
-// TC= O(2n)
-// SC=O(n)
+
