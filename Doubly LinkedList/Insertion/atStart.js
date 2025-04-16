@@ -1,5 +1,6 @@
 
 function Insertion(head) {
+    
     let insertNode = new Node("JavaScript");
 
     insertNode.next = head;

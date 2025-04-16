@@ -1,15 +1,14 @@
 
 function Insertion(head) {
+    
     let insertNode = new Node("JavaScript");
-
-
 
     let curr = head;
     while (curr.next != null) {
         curr = curr.next;
     }
     curr.next = insertNode;
-    insertNode.prev=curr
+    insertNode.prev = curr
     insertNode.next = null
 
     curr = head;

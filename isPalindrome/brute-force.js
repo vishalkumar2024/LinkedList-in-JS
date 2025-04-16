@@ -30,14 +30,14 @@ function Node(data) {
 
 let head = new Node(1);
 let m1 = new Node(2);
-let m2 = new Node(3);
-let m3 = new Node(2);
-let m4 = new Node(1);
+// let m2 = new Node(3);
+// let m3 = new Node(2);
+// let m4 = new Node(1);
 
 head.next = m1;
-m1.next = m2;
-m2.next = m3;
-m3.next = m4;
+m1.next = null;
+// m2.next = m3;
+// m3.next = m4;
 
 console.log(reverseList(head));
 

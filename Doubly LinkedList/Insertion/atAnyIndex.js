@@ -11,7 +11,7 @@ function Insertion(head, target) {
     }
     let temp = current.next;
     current.next = newNode;
-    newNode.prev=current
+    newNode.prev = current
     newNode.next = temp;
 
     current = head;
@@ -40,7 +40,6 @@ m2.prev = m1;
 m2.next = m3;
 m3.prev = m2;
 m3.next = null;
-
 
 console.log(Insertion(head, 2));
 

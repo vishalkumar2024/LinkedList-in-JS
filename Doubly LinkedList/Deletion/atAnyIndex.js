@@ -1,5 +1,5 @@
 
-function deletion(head,target) {
+function deletion(head, target) {
     let current = head;
     let idx = 0;
     while (current.next != null && idx != target - 1) {
@@ -16,7 +16,7 @@ function deletion(head,target) {
             current = current.next;
         }
     }
-     traversal(head)
+    traversal(head)
 }
 
 

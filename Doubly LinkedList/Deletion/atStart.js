@@ -3,7 +3,7 @@ function deletion(head) {
     head = head.next;
 
     let curr = head;
-    while (curr != null) {
+    while (curr != null) {  //11 is be deleted
         console.log(curr.data)
         curr = curr.next;
     }
