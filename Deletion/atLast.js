@@ -1,3 +1,25 @@
+function deletion(head) {
+    head.next = m1;
+    m1.next = m2;
+    m2.next = tail;
+
+    let current = head;
+    while (current.next.next != null) {
+        current = current.next;
+    }
+
+    current.next = null; //40 wil be deleted
+
+    current = head;
+    let res = "";
+    while (current != null) {
+        res += current.data + " "
+        current = current.next;
+    }
+
+    return res;
+}
+
 function Node(data) {
     this.data = data;
     this.next = null
@@ -8,26 +30,8 @@ let m1 = new Node(20);
 let m2 = new Node(30);
 let tail = new Node(40);
 
-head.next = m1;
-m1.next = m2;
-m2.next = tail;
+console.log(deletion(head))
 
-let current = head;
-while (current.next.next != null) {
-    current = current.next;
-}
-
-current.next = null; //40 wil be deleted
-
-function traversal(head) {
-    let current = head;
-    while (current != null) {
-        console.log(current.data);
-        current = current.next;
-    }
-}
-
-traversal(head);
 
 
 
