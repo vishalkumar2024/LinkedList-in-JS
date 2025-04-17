@@ -2,29 +2,15 @@
 function removeDuplicates(head) {
 
     let curr = head;
-    let candidate = -Infinity;
-    while (curr != null) {
+    while (curr != null && curr.next !== null) {
         if (curr.data === curr.next.data) {
-            candidate = curr.data;
+            curr.next = curr.next.next
         }
         else {
             curr = curr.next;
         }
     }
-
-    function remove(head, curr) {
-        curr = head;
-        while (curr != null) {
-            if (curr.data === candidate) {
-                curr.next = curr.next.next;
-            }
-            else {
-                curr = curr.next
-            }
-        }
-        return head;
-    }
-    return remove(head, candidate);
+    return head;
 }
 
 function Node(data) {
