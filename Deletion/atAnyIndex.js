@@ -19,7 +19,7 @@ m4.next = null;
 
 function deleteNode(head, target) {
     let current = head;
-    let idx = 1;
+    let idx = 0;
     while (current.next != null && idx != target - 1) {
         current = current.next;
         idx++
@@ -29,14 +29,14 @@ function deleteNode(head, target) {
 }
 
 
-// function traversal(head) {
-//     let current = head;
-//     while (current != null) {
-//         console.log(current.data);
-//         current = current.next;
-//     }
-// }
+function traversal(head) {
+    let current = head;
+    while (current != null) {
+        console.log(current.data);
+        current = current.next;
+    }
+}
 
 console.log(deleteNode(head, 1));
-// traversal(head);
+traversal(head);
 
