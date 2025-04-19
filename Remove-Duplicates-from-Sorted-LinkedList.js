@@ -31,5 +31,4 @@ m3.next = null;
 
 console.log(removeDuplicates(head));
 
-// TC=O(n)
-// SC=O(n)
+ 

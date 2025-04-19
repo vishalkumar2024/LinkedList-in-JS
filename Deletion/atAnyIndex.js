@@ -6,7 +6,7 @@ function deleteNode(head, target) {
         current = current.next;
         idx++
     }
-    current.next = current.next.next;
+    current.next = current.next.next; // 4 will be deleted as it is present at 1th index (target)
 
     current = head;
     let res="";
