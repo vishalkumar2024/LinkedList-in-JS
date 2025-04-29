@@ -15,7 +15,6 @@ function deleteNode(head, target) {
         current = current.next;
     }
     return res;
-
 }
 
 function Node(data) {

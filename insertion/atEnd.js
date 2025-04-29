@@ -27,6 +27,7 @@ function node(data) {
 let head = new node(12)
 let mid = new node(18);
 let tail = new node(24);
+
 head.next = mid;
 mid.next = tail;
 let newNode = new node("JavaScript") //node which has to be inserted to the last of linkedList

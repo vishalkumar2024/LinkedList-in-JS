@@ -1,12 +1,9 @@
 
-// // Inserting new node to the starting //
+// Inserting new node to the starting //
 function insertion(head, newNode) {
 
-    head.next = mid;
     newNode.next = head;
     head = newNode;
-
-
 
     let current = head;
     let res="";
@@ -20,9 +17,12 @@ function node(data) {
     this.data = data;
     this.next = null;
 }
+
 let head = new node(12)
 let mid = new node(18);
 
+head.next=mid;
+mid.next=null;
 
 let newNode = new node("JavaScript");
 
