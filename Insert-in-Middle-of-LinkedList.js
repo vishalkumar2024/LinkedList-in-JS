@@ -1,31 +1,22 @@
+// Given the head of a Singly Linked List and a value x. The task is to insert the 
+// key in the middle of the linked list
 
-function insertInMiddle(head, x) {   //Not solved yet
+function insertInMiddle(head, x) {
     let insert = new Node(x);
-    let mid = -1;
-    function totalCount(head, count) {
-        let ptr = head;
-        while (ptr != null) { //TC=O(n)
-            ptr = ptr.next;
-            count++
-        }
-        return count;
-    }
-    if (totalCount(head, 1) == 0) {
-        return x
-    }
-    
-    let totalNode = totalCount(head, 1) - 1;
 
-    if ((totalNode / 2) % 1 === 0) {
-        mid = totalNode / 2;
+    let ptr = head;
+    let count = 0;
+    while (ptr != null) { //TC=O(n)
+        ptr = ptr.next;
+        count++
     }
-    else {
-        mid = Math.ceil(totalNode / 2);
-    }
+    if (count == 0) return insert;
+    let mid = count % 2 == 0 ? (count / 2) : Math.ceil(count / 2);
 
     let curr = head;
     let idx = 1;
-    while (idx < mid) {
+
+    while (curr !== null && idx < mid) { //TC=O(n/2)
         curr = curr.next;
         idx++;
     }
@@ -36,10 +27,9 @@ function insertInMiddle(head, x) {   //Not solved yet
     // return head;
 
     curr = head;
-
     while (curr !== null) {
         console.log(curr.data)
-        curr = curr.next
+        curr = curr.next;
     }
 }
 
@@ -61,4 +51,6 @@ m3.next = m4;
 
 console.log(insertInMiddle(head, 12));
 
+// TC=O(n)
+// SC=O(1)
 

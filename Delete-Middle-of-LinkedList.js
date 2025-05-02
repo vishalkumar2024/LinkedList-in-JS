@@ -3,12 +3,13 @@
 function deleteMid(head) {
 
     let ptr = head;
-    count=0;
+    let count=0;
     while (ptr != null) { //TC=O(n)
         ptr = ptr.next;
         count++
     }
-    mid=count%2==0?(count/2)+1:Math.ceil(count/2);
+    if(count==1) return null;
+    let mid=count%2==0?(count/2)+1:Math.ceil(count/2);
 
     let curr = head;
     let idx = 1;
