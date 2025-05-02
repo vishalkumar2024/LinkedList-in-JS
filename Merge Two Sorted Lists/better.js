@@ -30,7 +30,7 @@ function mergeTwoLists(headA, headB) {
 
     let curr = dummyNode.next;
     let res = "";
-    while (curr !== null) {
+    while (curr) {
         res += curr.data + " "
         curr = curr.next;
     }
