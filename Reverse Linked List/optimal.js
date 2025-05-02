@@ -1,15 +1,18 @@
 //Leetcode 206
 
 function reverseList(head) {
-    var prev=null;
-    var temp=head;
-    while(temp!=null){
-        var ref=temp.next;
-        temp.next=prev;
-        prev=temp;
-        temp=ref;
+    var prevNode=null;
+    var currNode=head;
+
+    while(currNode!=null){
+        var nextNode=currNode.next;
+        currNode.next=prevNode;
+
+        //update
+        prevNode=currNode;
+        currNode=nextNode;
     }
-    return prev
+    return prevNode;
 }
 
 function Node(data) {
