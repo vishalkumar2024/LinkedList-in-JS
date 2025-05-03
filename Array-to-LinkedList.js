@@ -4,7 +4,7 @@
 function arrayToList(arr) {
     let head = new Node(arr[0]);
     let ptr = head;
-    for (let i = 1; i < arr.length; i++) {
+    for (let i = 1; i < arr.length; i++) { //TC=O(n)
         let n = new Node(arr[i])
         ptr.next = n;
         ptr = ptr.next;
@@ -22,3 +22,5 @@ let arr = [1, 2, 3, 4, 5]
 
 console.log(arrayToList(arr));
 
+// TC=O(n)
+// SC=O(n)

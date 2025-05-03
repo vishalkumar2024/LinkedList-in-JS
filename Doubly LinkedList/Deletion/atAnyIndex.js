@@ -6,8 +6,14 @@ function deletion(head, target) {
         current = current.next;
         idx++
     }
-    current.next = current.next.next;
+    let temp=current.next;
+    let temp2=current.next.next
 
+    current.next=temp2;
+    temp.prev=current;
+
+    temp.prev=null;
+    temp.next=null;
 
     function traversal(head) {
         let current = head;

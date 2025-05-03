@@ -5,9 +5,10 @@ function deletion(head) {
     while (current.next.next != null) {
         current = current.next;
     }
-
+    let temp = current.next
+    temp.prev = null;
     current.next = null; //40 wil be deleted
-
+ 
     function traversal(head) {
         let current = head;
         while (current != null) {
@@ -15,7 +16,7 @@ function deletion(head) {
             current = current.next;
         }
     }
-   traversal(head)
+    traversal(head)
 }
 
 function Node(data) {

@@ -1,6 +1,9 @@
 
 function deletion(head) {
     head = head.next;
+    head.prev=null
+
+    console.log(head)
 
     let curr = head;
     while (curr != null) {  //11 is be deleted
