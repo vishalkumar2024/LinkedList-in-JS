@@ -1,19 +1,26 @@
 
 function deletion(head, target) {
     let current = head;
-    let idx = 0;
+    let idx = 1;
     while (current.next != null && idx != target - 1) {
         current = current.next;
         idx++
     }
-    let temp=current.next;
-    let temp2=current.next.next
+    if (current.next == null) {
+        let temp = current.prev
+        temp.next = null;
+        current.prev = null;
 
-    current.next=temp2;
-    temp.prev=current;
+        return head;
+    }
+    let temp = current.next;
+    let temp2 = current.next.next
 
-    temp.prev=null;
-    temp.next=null;
+    current.next = temp2;
+    temp.prev = current;
+
+    temp.prev = null;
+    temp.next = null;
 
     function traversal(head) {
         let current = head;
