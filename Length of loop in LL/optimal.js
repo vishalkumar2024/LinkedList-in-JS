@@ -1,6 +1,8 @@
 // Given the head of a linked list, determine whether the list contains a loop. If
 // loop is present, return the number of nodes in the loop, otherwise return null.
 
+//Tortoise and Hare algorithm
+
 function countNodesinLoop(head) {
     let slow = head;
     let fast = head;
