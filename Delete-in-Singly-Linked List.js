@@ -14,6 +14,8 @@ function deleteList(head, x) {
     if (current !== null && current.next !== null) {
         current.next = current.next.next;
     }
+    // return head;
+
     for (let curr = head; curr != null; curr = curr.next) {
         console.log(curr.data);
     }
