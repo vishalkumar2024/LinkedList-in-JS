@@ -11,7 +11,7 @@ function reverseList(head) {
     }
 
     // Reverse the second half of the linked list
-    function reverseList(head) {  //TC=O(n/2)
+    function ereverseList(head) {  //TC=O(n/2)
         var prevNode = null;
         var currNode = head;
 
