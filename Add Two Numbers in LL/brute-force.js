@@ -32,7 +32,11 @@ function addTwoNumbers(L1, L2) {
     }
     temp.next = null;
 
-    return newList.next;
+    // return newList.next;
+
+   let d1= 993974
+   let d2= 785364
+   console.log(d1*d2)
 }
 
 function Node(data) {
