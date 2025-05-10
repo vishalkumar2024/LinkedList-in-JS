@@ -10,16 +10,16 @@ function findPairsWithGivenSum(head, target) {
     }
 
     let res = [];
-    while (curr1.data <= curr2.data) {  //TC=O(n/2)
-        if (curr1.data + curr2.data==target) {
+    while (curr1 !== null && curr2 !== null && curr1 !== curr2 && curr2.next !== curr1) {  //TC=O(n/2)
+        if (curr1.data + curr2.data == target) {
             res.push([curr1.data, curr2.data]);
             curr1 = curr1.next;
             curr2 = curr2.prev;
         }
-         else if ((curr1.data + curr2.data) > target) {
+        else if ((curr1.data + curr2.data) > target) {
             curr2 = curr2.prev
         }
-        else ((curr1.data + curr2.data) < target) {
+        else {
             curr1 = curr1.next;
         }
     }
