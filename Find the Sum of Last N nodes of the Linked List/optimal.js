@@ -5,7 +5,7 @@ function sumOfLastN_Nodes(head, n) {
         var prevNode = null;
         var currNode = head;
 
-        while (currNode != null) {
+        while (currNode != null) {  //TC=O(len(head))
             var nextNode = currNode.next;
             currNode.next = prevNode;
 
@@ -15,13 +15,11 @@ function sumOfLastN_Nodes(head, n) {
         }
         return prevNode;
     }
-
     let reversed = reverseList(head)
-
 
     let curr = reversed;
     let sum = 0;
-    for (let i = 1; i <= n; i++) {
+    for (let i = 1; i <= n; i++) {  //TC=O(n)
         sum += curr.data;
         curr = curr.next
     }
@@ -47,7 +45,8 @@ m3.next = m4;
 m4.next = m5;
 m5.next = null;
 
-
 console.log(sumOfLastN_Nodes(head, 3));
 
 
+// TC=O(len(head)+n)
+// SC=O(1)
