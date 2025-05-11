@@ -1,21 +1,29 @@
 // Leetcode 82
 function removeDuplicates(head) {
-    let curr1 = head;
 
-    while (curr1 && curr1.next) {
-        let curr2 = curr1.next;
-            while (curr2 && curr2.data == curr1.data) {
-                curr2 = curr2.next;
+    const dummy = new Node(-1); // Dummy node to handle edge cases
+    dummy.next = head;
+    let prev = dummy;
+    let curr = head;
+
+    while (curr) {
+        if (curr.next && curr.data === curr.next.data) {
+            while (curr.next && curr.data === curr.next.data) {
+                curr = curr.next;
             }
-            curr1.next = curr2;
-            curr1 = curr1.next;
+            prev.next = curr.next;
+        } else {
+            prev = prev.next;
+        }
+        curr = curr.next;
     }
-    // return head
 
-    let curr=head;
-    while(curr){
+    // return dummy.next;
+
+    curr = dummy.next;
+    while (curr) {
         console.log(curr.data)
-        curr=curr.next
+        curr = curr.next;
     }
 }
 
@@ -25,11 +33,11 @@ function Node(data) {
 }
 
 let head = new Node(1);
-let m1 = new Node(2);
-let m2 = new Node(3);
+let m1 = new Node(1);
+let m2 = new Node(2);
 let m3 = new Node(3);
-let m4 = new Node(4);
-let m5 = new Node(4);
+let m4 = new Node(3);
+let m5 = new Node(5);
 let m6 = new Node(5);
 
 head.next = m1;

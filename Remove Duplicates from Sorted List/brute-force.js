@@ -7,17 +7,15 @@ function removeDuplicates(head) {
         map.set(curr.data, (map.get(curr.data) || 0) + 1);
         curr = curr.next
     }
-    
+
     let newList = new Node(0); //SC=O(n)
     curr = newList;
     for (let [key, value] of map) {  //TC=O(n)
-        if (value == 1) {
-            let newNode = new Node(key);
-            curr.next = newNode;
-            curr = curr.next;
-        }
+        let newNode = new Node(key);
+        curr.next = newNode;
+        curr = curr.next;
     }
-    curr.next=null
+    curr.next = null
     return newList.next;
 }
 
