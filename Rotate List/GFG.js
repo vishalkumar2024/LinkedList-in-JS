@@ -80,5 +80,5 @@ m4.next = null;
 
 console.log(rotateRight(head, 10));
 
-// TC=O(3n)
+// TC=O(3n + 2k)
 // SC=O(1)
