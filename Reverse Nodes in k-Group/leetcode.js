@@ -5,8 +5,6 @@ function reverseKGroup(head, k) {
         let idx = 1
         let ptr = head;
         while (ptr !== null && idx < k) { //TC=O(k)
-            if (ptr.next == null) {
-            }
             ptr = ptr.next;
             idx++;
         }
