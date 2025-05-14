@@ -1,6 +1,7 @@
 // leetcode 25
 function reverseKGroup(head, k) {
 
+    //function to React the kth node
     function kThNode(head, k) {
         let idx = 1
         let ptr = head;
@@ -10,7 +11,8 @@ function reverseKGroup(head, k) {
         }
         return ptr;
     }
-
+   
+    // Function to reverse
     function reverseList(head) { //TC=O(k)
         var prevNode = null;
         var currNode = head;
