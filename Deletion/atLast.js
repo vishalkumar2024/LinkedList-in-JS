@@ -1,8 +1,4 @@
 function deletion(head) {
-    head.next = m1;
-    m1.next = m2;
-    m2.next = tail;
-
     let current = head;
     while (current.next.next != null) {
         current = current.next;
@@ -11,13 +7,11 @@ function deletion(head) {
     current.next = null; //40 wil be deleted
 
     current = head;
-    let res = "";
     while (current != null) {
-        res += current.data + " "
+        console.log(current.data)
         current = current.next;
     }
-
-    return res;
+ 
 }
 
 function Node(data) {
@@ -30,7 +24,11 @@ let m1 = new Node(20);
 let m2 = new Node(30);
 let tail = new Node(40);
 
-console.log(deletion(head))
+head.next = m1;
+m1.next = m2;
+m2.next = tail;
+
+deletion(head)
 
 
 

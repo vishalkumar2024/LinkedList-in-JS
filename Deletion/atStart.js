@@ -1,27 +1,34 @@
 function deletion(head) {
-    head.next = mid;
-    mid.next = tail;
 
-    head = head.next // 12 will be deleted
+    let temp = head.next;
+    head.next = null;
+    head = temp // 12 will be deleted
 
     let current = head;
-    let res = "";
     while (current != null) {
-        res+=current.data+" "
+        console.log(current.data)
         current = current.next;
     }
-    return res;
 }
 function node(data) {
     this.data = data;
     this.next = null;
 }
 
-let head = new node(12)
-let mid = new node(18);
-let tail = new node(24);
+let head = new node(10)
+let n1 = new node(20);
+let n2 = new node(30);
+let n3 = new node(40);
+let n4 = new node(50);
 
-console.log(deletion(head))
+head.next = n1;
+n1.next = n2;
+n2.next = n3;
+n3.next = n4;
+n4.next = null;
+
+
+deletion(head)
 
 
 

@@ -4,15 +4,15 @@
 
 function GetNth(head, index) {
 
-    let curr=head;
-    let idx=1
-    while(curr!==null && idx<=index-1){  //TC=O(n)
-        curr=curr.next;
+    let curr = head;
+    let idx = 1
+    while (curr !== null && idx < index) {  //TC=O(n)
+        curr = curr.next;
         idx++;
     }
-    if(curr==null) return -1;
+    if (curr == null) return -1;
     return curr.data;
-    
+
 }
 
 function Node(data) {

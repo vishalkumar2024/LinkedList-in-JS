@@ -16,7 +16,7 @@ function displayList(head) {
     let arr1 = [];  //SC=O(n)
     let arr2 = [];  //SC=O(n)
     let idx = 0
-    while (curr != null && idx < 3) {  //TC=O(n)
+    while (curr != null && idx < count) {  //TC=O(n)
         arr1[idx] = curr.data;
         arr2[(count - 1) - idx] = curr.data;
         curr = curr.next;

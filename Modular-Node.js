@@ -1,3 +1,9 @@
+// Given the head of a Singly Linked List and a number k, the task is to find
+// the data of the modular node of the linked list. If no such index is present
+// return -1.
+
+// A modular node is defined as the last node in the linked list whose index
+// is divisible by k (i%k==0). 
 
 function modularNode(head, x) {
     let ptr = head;

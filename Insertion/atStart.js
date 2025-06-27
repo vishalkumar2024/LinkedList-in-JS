@@ -13,6 +13,7 @@ function insertion(head, newNode) {
     }
     return res;
 }
+
 function node(data) {
     this.data = data;
     this.next = null;
