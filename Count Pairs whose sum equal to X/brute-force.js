@@ -1,24 +1,21 @@
 // Given two linked lists head1 and head2 with distinct elements, determine the count
-//  of all distinct pairs from both lists whose sum equals the given value x.
+// of all distinct pairs from both lists whose sum equals the given value x.
 
-function countPairs(headA, headB, x) {
-    let map = new Map(); //SC=O(m)
-
-    let curr = headA;
-    while (curr) {    //TC=O(m)
-        map.set(curr.data)
-        curr = curr.next;
-    }
-
+function countPairs(head1, head2, x) {
     let count = 0;
-    curr = headB;
-    while (curr) {  //TC=O(n)
-        if (map.has(x - curr.data || curr.data - x)) {  //SC=O(n)
-            count++;
+    let curr1 = head1;
+    while (curr1) {
+        let curr2 = head2;
+        while (curr2) {
+            if ((curr1.data + curr2.data) == x) {
+                count++;
+                break;
+            }
+            curr2 = curr2.next;
         }
-        curr = curr.next;
+        curr1 = curr1.next;
     }
-    return count;
+    return count
 }
 
 function Node(data) {
@@ -50,5 +47,5 @@ n3.next = null;
 console.log(countPairs(head1, head2, 10));
 
 
-// TC=(m+n)
-// SC=(m+n) 
+// TC=O(m*n)
+// SC=O(1)

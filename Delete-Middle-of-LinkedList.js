@@ -9,12 +9,12 @@ function deleteMid(head) {
         count++
     }
     if(count==1) return null;
-    let mid=count%2==0?(count/2)+1:Math.ceil(count/2);
+    let mid=count%2==0?(count/2):Math.floor(count/2);
 
     let curr = head;
     let idx = 1;
 
-    while (curr!==null && idx < mid-1) { //TC=O(n/2)
+    while (curr!==null && idx < mid) { //TC=O(n/2)
         curr = curr.next;
         idx++;
     }
@@ -26,7 +26,6 @@ function deleteMid(head) {
         console.log(curr.data)
         curr = curr.next;
     }
-
 }
 
 function Node(data) {
