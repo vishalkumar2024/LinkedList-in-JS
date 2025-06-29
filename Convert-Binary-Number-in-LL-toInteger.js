@@ -3,7 +3,7 @@
 function getDecimalValue(head) {
     let curr = head;
     let n = 0
-    while (curr) {
+    while (curr) { //determining total number of nodes
         n++;
         curr = curr.next;
     }

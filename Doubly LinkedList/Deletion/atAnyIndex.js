@@ -13,11 +13,12 @@ function deletion(head, target) {
 
         return head;
     }
+
     let temp = current.next;
     let temp2 = current.next.next
 
     current.next = temp2;
-    temp.prev = current;
+    temp2.prev = current;
 
     temp.prev = null;
     temp.next = null;
