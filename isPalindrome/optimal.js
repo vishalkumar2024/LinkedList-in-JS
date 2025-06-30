@@ -3,8 +3,6 @@
 function reverseList(head) {
 
     // Find the middle of the linked list
-
-    // Find the middle of the linked list
     var slow = head;
     var fast = head;
     while (fast.next !== null && fast.next.next !== null) {

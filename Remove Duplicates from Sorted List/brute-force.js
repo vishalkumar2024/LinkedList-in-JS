@@ -7,6 +7,7 @@ function removeDuplicates(head) {
         map.set(curr.data, (map.get(curr.data) || 0) + 1);
         curr = curr.next
     }
+    console.log(map)
 
     let newList = new Node(0); //SC=O(n)
     curr = newList;
