@@ -3,15 +3,17 @@
 function reverseList(head) {
 
     // Find the middle of the linked list
+
+    // Find the middle of the linked list
     var slow = head;
     var fast = head;
-    while (fast.next !== null && fast.next.next !== null) {  //TC=O(n/2)
+    while (fast.next !== null && fast.next.next !== null) {
         slow = slow.next;
         fast = fast.next.next;
     }
 
     // Reverse the second half of the linked list
-    function ereverseList(head) {  //TC=O(n/2)
+    function reverseList(head) {
         var prevNode = null;
         var currNode = head;
 
@@ -32,8 +34,8 @@ function reverseList(head) {
     // Compare the first half with the reversed second half
     let ptr1 = newHead;
     let ptr2 = head;
-    while (ptr1 !== null && ptr2 !== null) {  //TC=O(n/2)
-        if (ptr1.val !== ptr2.val) {
+    while (ptr1 !== null && ptr2 !== null) {
+        if (ptr1.data !== ptr2.data) {
             return false;
         }
         ptr1 = ptr1.next;
@@ -41,6 +43,7 @@ function reverseList(head) {
     }
 
     return true;
+
 };
 
 function Node(val) {
