@@ -14,7 +14,7 @@ function removeNthFromEnd(head, n) {
 
     curr = head;
     idx = 1
-    while (idx < diff) { //TC=O(n)
+    while (curr && idx < diff) { //TC=O(n)
         curr = curr.next;
         idx++;
     }
