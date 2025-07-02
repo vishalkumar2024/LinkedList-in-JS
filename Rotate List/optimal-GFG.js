@@ -13,12 +13,12 @@ function rotateRight(head, k) {
     }
     if (k == length || k % length == 0) return head;
     else if (k > length) k = length - (k % length)
-    else if (length > k) k = length - k
+    // else if (length > k) k = length - k
 
     curr.next = head;
     curr = head;
     let idx = 1
-    while (curr && idx < (length - k)) { //TC=O(len - k)
+    while (curr && idx < k) { //TC=O(len - k)
         idx++
         curr = curr.next
     }
