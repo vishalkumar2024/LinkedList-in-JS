@@ -1,5 +1,7 @@
 //Leetcode 876
 
+// Solved with Tortoise and hare Technique
+
 function middleNode(head) {
     let first = head;
     let second = head;

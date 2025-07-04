@@ -1,10 +1,12 @@
 // leetcode 141
 
+// Solved with Tortoise and hare Technique
+
 function hasCycle(head) {
     let slow = head;
     let fast = head;
 
-    while (fast !== null && fast.next !== null) {  //TC=O(n)
+      while(fast.next && fast.next.next && fast.next.next && fast.next){ //TC=O(n)
         slow = slow.next;
         fast = fast.next.next;
         if ( slow == fast) return true;
